@@ -27,8 +27,8 @@ class ToyDataset(Dataset):
         if split == "train":
             self.y = y[train_split]
             self.x = x[train_split]
-            self.x = th.cat(self.x, self.x)
-            self.y = th.cat(self.y, -self.y)
+            self.x = th.cat((self.x, self.x))
+            self.y = th.cat((self.y, -self.y))
         elif split == "test":
             self.y = y[test_split]
             self.x = x[test_split]
