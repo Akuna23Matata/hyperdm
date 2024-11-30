@@ -67,7 +67,7 @@ def toy_test(args):
                      label="EU")
     plt.legend()
     plt.title("HyperDM")
-    plt.savefig("toy_result.pdf")
+    plt.show("toy_result.pdf")
 
 def era5_test(args):
     device = "cuda" if th.cuda.is_available() else "cpu"
